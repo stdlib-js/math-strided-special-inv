@@ -2,7 +2,7 @@
 
 @license Apache-2.0
 
-Copyright (c) 2020 The Stdlib Authors.
+Copyright (c) 2021 The Stdlib Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -22,11 +22,11 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
 
-> Compute the [multiplicative inverse][multiplicative-inverse] for each element in a strided array.
+> Compute the [multiplicative inverse][@stdlib/math/base/special/inv] for each element in a strided array.
 
 <section class="intro">
 
-The [multiplicative inverse][multiplicative-inverse] (or **reciprocal**) is defined as
+The [multiplicative inverse][@stdlib/math/base/special/inv] (or **reciprocal**) is defined as
 
 <!-- <equation class="equation" label="eq:multiplicative_inverse" align="center" raw="y = \frac{1}{x}" alt="Multiplicative inverse"> -->
 
@@ -59,9 +59,9 @@ npm install @stdlib/math-strided-special-inv
 var inv = require( '@stdlib/math-strided-special-inv' );
 ```
 
-#### inv( N, x, strideX, y, strideY )
+#### inv( N, dtypeX, x, strideX, dtypeY, y, strideY )
 
-Computes the [multiplicative inverse][multiplicative-inverse] for each element in a strided array `x` and assigns the results to elements in a strided array `y`.
+Computes the [multiplicative inverse][@stdlib/math/base/special/inv] for each element in a strided array `x` and assigns the results to elements in a strided array `y`.
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
@@ -69,15 +69,17 @@ var Float64Array = require( '@stdlib/array-float64' );
 var x = new Float64Array( [ -20.0, -1.0, 2.0, 4.0, 10.0 ] );
 
 // Perform operation in-place:
-inv( x.length, x, 1, x, 1 );
+inv( x.length, 'float64', x, 1, 'float64', x, 1 );
 // x => <Float64Array>[ -0.05, -1.0, 0.5, 0.25, 0.1 ]
 ```
 
 The function accepts the following arguments:
 
 -   **N**: number of indexed elements.
+-   **dtypeX**: [data type][@stdlib/strided/dtypes] for `x`.
 -   **x**: input array-like object.
 -   **strideX**: index increment for `x`.
+-   **dtypeY**: [data type][@stdlib/strided/dtypes] for `y`.
 -   **y**: output array-like object.
 -   **strideY**: index increment for `y`.
 
@@ -89,7 +91,7 @@ var Float64Array = require( '@stdlib/array-float64' );
 var x = new Float64Array( [ -20.0, -1.0, 2.0, 4.0, 10.0, 100.0 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 
-inv( 3, x, 2, y, -1 );
+inv( 3, 'float64', x, 2, 'float64', y, -1 );
 // y => <Float64Array>[ 0.1, 0.5, -0.05, 0.0, 0.0, 0.0 ]
 ```
 
@@ -106,13 +108,13 @@ var y0 = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 var x1 = new Float64Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
 var y1 = new Float64Array( y0.buffer, y0.BYTES_PER_ELEMENT*3 ); // start at 4th element
 
-inv( 3, x1, -2, y1, 1 );
+inv( 3, 'float64', x1, -2, 'float64', y1, 1 );
 // y0 => <Float64Array>[ 0.0, 0.0, 0.0, 0.01, 0.25, -1.0 ]
 ```
 
-#### inv.ndarray( N, x, strideX, offsetX, y, strideY, offsetY )
+#### inv.ndarray( N, dtypeX, x, strideX, offsetX, dtypeY, y, strideY, offsetY )
 
-Computes the [multiplicative inverse][multiplicative-inverse] for each element in a strided array `x` and assigns the results to elements in a strided array `y` using alternative indexing semantics.
+Computes the [multiplicative inverse][@stdlib/math/base/special/inv] for each element in a strided array `x` and assigns the results to elements in a strided array `y` using alternative indexing semantics.
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
@@ -120,7 +122,7 @@ var Float64Array = require( '@stdlib/array-float64' );
 var x = new Float64Array( [ -20.0, -1.0, 2.0, 4.0, 10.0 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 
-inv.ndarray( x.length, x, 1, 0, y, 1, 0 );
+inv.ndarray( x.length, 'float64', x, 1, 0, 'float64', y, 1, 0 );
 // y => <Float64Array>[ -0.05, -1.0, 0.5, 0.25, 0.1 ]
 ```
 
@@ -137,7 +139,7 @@ var Float64Array = require( '@stdlib/array-float64' );
 var x = new Float64Array( [ -20.0, -1.0, 2.0, 4.0, 10.0, 100.0 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 
-inv.ndarray( 3, x, 2, 1, y, -1, y.length-1 );
+inv.ndarray( 3, 'float64', x, 2, 1, 'float64', y, -1, y.length-1 );
 // y => <Float64Array>[ 0.0, 0.0, 0.0, 0.01, 0.25, -1.0 ]
 ```
 
@@ -178,7 +180,7 @@ for ( i = 0; i < dt.length; i++ ) {
     y = filledarray( 0.0, x.length, 'generic' );
     console.log( y );
 
-    inv.ndarray( x.length, x, 1, 0, y, -1, y.length-1 );
+    inv.ndarray( x.length, dt[ i ], x, 1, 0, 'generic', y, -1, y.length-1 );
     console.log( y );
     console.log( '' );
 }
@@ -187,6 +189,16 @@ for ( i = 0; i < dt.length; i++ ) {
 </section>
 
 <!-- /.examples -->
+
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 
 <section class="main-repo" >
@@ -245,7 +257,9 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[multiplicative-inverse]: https://en.wikipedia.org/wiki/Multiplicative_inverse
+[@stdlib/strided/dtypes]: https://github.com/stdlib-js/strided-dtypes
+
+[@stdlib/math/base/special/inv]: https://github.com/stdlib-js/math-base-special-inv
 
 </section>
 
