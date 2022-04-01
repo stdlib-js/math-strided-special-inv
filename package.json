@@ -1,0 +1,34 @@
+{
+  "name": "@stdlib/math-strided-special-inv",
+  "version": "0.0.0",
+  "description": "Compute the multiplicative inverse for each element in a strided array.",
+  "license": "Apache-2.0",
+  "main": "./bundle.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-strided-special-inv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "inv",
+    "multiplicative",
+    "inverse",
+    "reciprocal",
+    "vector",
+    "array",
+    "strided",
+    "ndarray",
+    "element-wise"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
