@@ -41,30 +41,14 @@ The [multiplicative inverse][@stdlib/math/base/special/inv] (or **reciprocal**) 
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-strided-special-inv
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var inv = require( '@stdlib/math-strided-special-inv' );
+import inv from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-inv@esm/index.mjs';
 ```
 
 #### inv( N, dtypeX, x, strideX, dtypeY, y, strideY )
@@ -72,7 +56,7 @@ var inv = require( '@stdlib/math-strided-special-inv' );
 Computes the [multiplicative inverse][@stdlib/math/base/special/inv] for each element in a strided array `x` and assigns the results to elements in a strided array `y`.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 var x = new Float64Array( [ -20.0, -1.0, 2.0, 4.0, 10.0 ] );
 
@@ -94,7 +78,7 @@ The function accepts the following arguments:
 The `N` and `stride` parameters determine which elements in `x` and `y` are accessed at runtime. For example, to index every other value in `x` and the first `N` elements of `y` in reverse order,
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 var x = new Float64Array( [ -20.0, -1.0, 2.0, 4.0, 10.0, 100.0 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -106,7 +90,7 @@ inv( 3, 'float64', x, 2, 'float64', y, -1 );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 // Initial arrays...
 var x0 = new Float64Array( [ -20.0, -1.0, 2.0, 4.0, 10.0, 100.0 ] );
@@ -125,7 +109,7 @@ inv( 3, 'float64', x1, -2, 'float64', y1, 1 );
 Computes the [multiplicative inverse][@stdlib/math/base/special/inv] for each element in a strided array `x` and assigns the results to elements in a strided array `y` using alternative indexing semantics.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 var x = new Float64Array( [ -20.0, -1.0, 2.0, 4.0, 10.0 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -142,7 +126,7 @@ The function accepts the following additional arguments:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offsetX` and `offsetY` parameters support indexing semantics based on starting indices. For example, to index every other value in `x` starting from the second value and to index the last `N` elements in `y`,
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 var x = new Float64Array( [ -20.0, -1.0, 2.0, 4.0, 10.0, 100.0 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -167,12 +151,17 @@ inv.ndarray( 3, 'float64', x, 2, 1, 'float64', y, -1, y.length-1 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var uniform = require( '@stdlib/random-base-uniform' ).factory;
-var filledarray = require( '@stdlib/array-filled' );
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var dtypes = require( '@stdlib/array-dtypes' );
-var inv = require( '@stdlib/math-strided-special-inv' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
+import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
+import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
+import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@esm/index.mjs';
+import inv from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-inv@esm/index.mjs';
 
 var dt;
 var x;
@@ -191,6 +180,10 @@ for ( i = 0; i < dt.length; i++ ) {
     console.log( y );
     console.log( '' );
 }
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -214,7 +207,7 @@ for ( i = 0; i < dt.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -276,9 +269,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/strided/dtypes]: https://github.com/stdlib-js/strided-dtypes
+[@stdlib/strided/dtypes]: https://github.com/stdlib-js/strided-dtypes/tree/esm
 
-[@stdlib/math/base/special/inv]: https://github.com/stdlib-js/math-base-special-inv
+[@stdlib/math/base/special/inv]: https://github.com/stdlib-js/math-base-special-inv/tree/esm
 
 </section>
 
