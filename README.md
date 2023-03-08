@@ -30,10 +30,14 @@ The [multiplicative inverse][@stdlib/math/base/special/inv] (or **reciprocal**) 
 
 <!-- <equation class="equation" label="eq:multiplicative_inverse" align="center" raw="y = \frac{1}{x}" alt="Multiplicative inverse"> -->
 
-<div class="equation" align="center" data-raw-text="y = \frac{1}{x}" data-equation="eq:multiplicative_inverse">
+```math
+y = \frac{1}{x}
+```
+
+<!-- <div class="equation" align="center" data-raw-text="y = \frac{1}{x}" data-equation="eq:multiplicative_inverse">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@c2ccda51c88b70a3311bc9ac46163826f945ebc0/lib/node_modules/@stdlib/math/strided/special/inv/docs/img/equation_multiplicative_inverse.svg" alt="Multiplicative inverse">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -258,7 +262,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
