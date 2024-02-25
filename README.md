@@ -63,7 +63,7 @@ y = \frac{1}{x}
 ## Usage
 
 ```javascript
-import inv from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-inv@esm/index.mjs';
+import inv from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-inv@v0.2.1-esm/index.mjs';
 ```
 
 #### inv( N, dtypeX, x, strideX, dtypeY, y, strideY )
@@ -176,7 +176,7 @@ var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-unifor
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
 import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed-real-float-dtypes@esm/index.mjs';
-import inv from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-inv@esm/index.mjs';
+import inv from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-inv@v0.2.1-esm/index.mjs';
 
 var dt;
 var x;
