@@ -56,8 +56,8 @@
     "@stdlib/utils-try-require": "^0.2.1"
   },
   "devDependencies": {
-    "@stdlib/array-filled": "^0.2.0",
-    "@stdlib/array-filled-by": "^0.2.0",
+    "@stdlib/array-filled": "^0.2.1",
+    "@stdlib/array-filled-by": "^0.2.1",
     "@stdlib/array-float64": "^0.2.1",
     "@stdlib/array-typed-real-float-dtypes": "^0.2.1",
     "@stdlib/array-uint8": "^0.2.1",
@@ -67,7 +67,7 @@
     "@stdlib/math-base-special-floor": "^0.2.1",
     "@stdlib/math-base-special-pow": "^0.2.1",
     "@stdlib/ndarray-base-dtypes2signatures": "^0.2.1",
-    "@stdlib/random-base-uniform": "^0.2.0",
+    "@stdlib/random-base-uniform": "^0.2.1",
     "@stdlib/strided-base-dtype-enum2str": "^0.2.1",
     "@stdlib/strided-base-unary-addon-dispatch": "^0.2.1",
     "proxyquire": "^2.0.0",
