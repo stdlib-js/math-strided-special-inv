@@ -50,7 +50,7 @@
     "@stdlib/strided-dispatch": "^0.2.2",
     "@stdlib/strided-dtypes": "^0.3.0",
     "@stdlib/strided-napi-unary": "^0.2.2",
-    "@stdlib/types": "^0.4.1",
+    "@stdlib/types": "^0.4.3",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
     "@stdlib/utils-library-manifest": "^0.2.2",
     "@stdlib/utils-try-require": "^0.2.2"
