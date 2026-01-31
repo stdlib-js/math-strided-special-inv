@@ -44,7 +44,7 @@
     "@stdlib/math-base-special-inv": "^0.2.2",
     "@stdlib/math-base-special-invf": "^0.2.2",
     "@stdlib/strided-base-dtype-resolve-enum": "^0.2.2",
-    "@stdlib/strided-base-function-object": "^0.2.2",
+    "@stdlib/strided-base-function-object": "^0.2.3",
     "@stdlib/strided-base-meta-data-props": "^0.2.2",
     "@stdlib/strided-base-unary": "^0.3.0",
     "@stdlib/strided-dispatch": "^0.2.2",
@@ -52,7 +52,7 @@
     "@stdlib/strided-napi-unary": "^0.2.2",
     "@stdlib/types": "^0.4.3",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
-    "@stdlib/utils-library-manifest": "^0.2.2",
+    "@stdlib/utils-library-manifest": "^0.2.3",
     "@stdlib/utils-try-require": "^0.2.2"
   },
   "devDependencies": {
@@ -106,7 +106,6 @@
     "ndarray",
     "element-wise"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
