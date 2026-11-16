@@ -70,7 +70,7 @@
     "@stdlib/random-base-uniform": "^0.2.3",
     "@stdlib/strided-base-dtype-enum2str": "^0.2.3",
     "@stdlib/strided-base-unary-addon-dispatch": "^0.3.1",
-    "@stdlib/string-format": "^0.2.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.3",
     "proxyquire": "^2.0.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
